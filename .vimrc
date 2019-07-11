@@ -8,11 +8,11 @@
 " 0.pip install yapf (for auto format) 
 "   sudo apt-get install ctags (or exuberant-ctags
 " 1.git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-" 3.cp vimrc ~/.vimrc
+" 3.cp ./.vimrc ~/.vimrc
 " 4.run ":BundleInstall" in vim
 " 5.cd ~/.vim/bundle/YouCompleteMe
 "   ./install.sh --clang-completer (cmake needed)
-" 6.
+" 6.enjoy your vim
 
 """"""""""""""""""""""""""""""""""""""
 """""""""""""" GLOBAL_CONFIG""""""""""
