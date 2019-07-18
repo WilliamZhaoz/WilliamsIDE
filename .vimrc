@@ -57,7 +57,7 @@ set fileformat=unix
 set showmatch					 " show match parentheses
 set linebreak					 " show whole word when linebreak
 set whichwrap=b,s,<,>,[,]		 " cursor can change line when reach the end
-set mouse=a					     " enable mouse usage
+" set mouse=a					     " enable mouse usage
 set number					     " show line number
 " set relativenumber				 " show relative number
 set numberwidth=4                " number width
@@ -136,7 +136,7 @@ let g:ycm_collect_identifiers_from_comments_and_strings=1
 let g:ycm_complele_in_strings=1
 let g:ycm_seed_identifiers_with_symtax=1
 set completeopt=menu,menuone
-let g:ycm_python_binary_path = '/home/zhiyuan/.conda/envs/pytorchSource/bin/python'
+" let g:ycm_python_binary_path = '/home/zhiyuan/.conda/envs/pytorchSource/bin/python'
 let g:ycm_min_num_of_chars_for_completion=1
 let g:ycm_max_num_candidates=10
 let g:ycm_max_num_identifier_candidates=5
