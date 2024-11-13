@@ -3,12 +3,11 @@
 echo "install william's IDE"
 
 work_path=$(dirname $(readlink -f $0))
-apt-get update &&
-apt-get upgrade &&
+# sudo yum update &&
+# sudo yum upgrade &&
 # ############# vim config
 # install vim requirements
 echo "config vim"
-apt-get install ctags && 
 pip install yapf && 
 if [[ -d ~/.vim/bundle/vundle ]]; then
     rm -rf ~/.vim/bundle/vundle
@@ -23,7 +22,6 @@ python install.py
 
 # ############# tmux config
 echo "config tmux"
-apt-get install tmux &&
 cd $work_path &&
 cp .tmux.conf ~/.tmux.conf &&
 echo "alias tmux='tmux -2'" >> ~/.bashrc &&

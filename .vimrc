@@ -88,7 +88,7 @@ call vundle#rc()
 """"""""""""""""""""""""""""""""""""""
 Plugin 'gmarik/vundle'			 " manage all bundles		
 Plugin 'scrooloose/nerdtree'     " browse dir and file
-Plugin 'Valloric/YouCompleteMe'	 " auto complete and syntastic check
+" Plugin 'Valloric/YouCompleteMe'	 " auto complete and syntastic check
 Plugin 'kien/ctrlp.vim'			 " ctrlp-too complex,hah,study later 
 Plugin 'Lokaltog/vim-powerline'  " powerline to show many things
 Plugin 'Raimondi/delimitMate'    " automatic closing of quotes, parenthesis, brackets, etc  
@@ -117,40 +117,40 @@ autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif 
 						         " Close vim if the only window left open is a NERDTree
 nnoremap <leader>f :NERDTreeToggle<cr>		 " use <leader>nt call nerdtree
-"""""""""""""""""""""""""""""""""""""
-" YouCompleteMe-|,d|C-o|C-i|
-"""""""""""""""""""""""""""""""""""""
-let g:ycm_autoclose_preview_window_after_completion=1
-let g:ycm_collect_identifiers_from_comments_and_strings=1
-let g:ycm_complele_in_strings=1
-let g:ycm_seed_identifiers_with_symtax=1
-set completeopt=menu,menuone
-" let g:ycm_python_binary_path = '/home/zhiyuan/.conda/envs/pytorchSource/bin/python'
-let g:ycm_min_num_of_chars_for_completion=1
-let g:ycm_max_num_candidates=10
-let g:ycm_max_num_identifier_candidates=5
-let g:ycm_show_diagnostics_ui=0  " close the auto analysis
-let g:ycm_add_previed_to_completeopt = 0
-                                 " do not show the previed to completeopt
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-                                 " support python
-let g:ycm_auto_trigger=1
-let g:ycm_filetype_whitelist={
-                        \ "c":1,
-                        \ "cpp":1,
-                        \ "objc":1,
-                        \ "python":1,
-                        \ "sh":1,
-                        \ "zsh":1,
-                        \ "php":1,
-                        \ "java":1,
-                        \ "cs":1,
-                        \ }
-nnoremap <leader>y :let g:ycm_auto_trigger=0<CR>
-nnoremap <leader>Y :let g:ycm_auto_trigger=1<CR>
-nnoremap <leader>de :YcmCompleter GoToDefinitionElseDeclaration<CR>
-						         "go to definition or declaration
-                                 "
+" """""""""""""""""""""""""""""""""""""
+" " YouCompleteMe-|,d|C-o|C-i|
+" """""""""""""""""""""""""""""""""""""
+" let g:ycm_autoclose_preview_window_after_completion=1
+" let g:ycm_collect_identifiers_from_comments_and_strings=1
+" let g:ycm_complele_in_strings=1
+" let g:ycm_seed_identifiers_with_symtax=1
+" set completeopt=menu,menuone
+" " let g:ycm_python_binary_path = '/home/zhiyuan/.conda/envs/pytorchSource/bin/python'
+" let g:ycm_min_num_of_chars_for_completion=1
+" let g:ycm_max_num_candidates=10
+" let g:ycm_max_num_identifier_candidates=5
+" let g:ycm_show_diagnostics_ui=0  " close the auto analysis
+" let g:ycm_add_previed_to_completeopt = 0
+"                                  " do not show the previed to completeopt
+" let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+"                                  " support python
+" let g:ycm_auto_trigger=1
+" let g:ycm_filetype_whitelist={
+"                         \ "c":1,
+"                         \ "cpp":1,
+"                         \ "objc":1,
+"                         \ "python":1,
+"                         \ "sh":1,
+"                         \ "zsh":1,
+"                         \ "php":1,
+"                         \ "java":1,
+"                         \ "cs":1,
+"                         \ }
+" nnoremap <leader>y :let g:ycm_auto_trigger=0<CR>
+" nnoremap <leader>Y :let g:ycm_auto_trigger=1<CR>
+" nnoremap <leader>de :YcmCompleter GoToDefinitionElseDeclaration<CR>
+" 						         "go to definition or declaration
+"                                  "
 " autoformat
 au BufWrite *.py :Autoformat            " autoformat when bufwrite *.py
 let g:formatter_yapf_style='pep8'     " or google, facebook, chromium
